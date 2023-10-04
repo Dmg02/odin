@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Alexandria',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +76,16 @@ WSGI_APPLICATION = 'odin.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'laborales',
+        'HOST': 'jiistdb.postgres.database.azure.com',
+        'PORT': '5432',
+        'USER': 'dmg',
+        'PASSWORD': 'hurduq-tydbut-5jewQe',
+        'OPTIONS': {'sslmode': 'require'},
+        },
 }
+
 
 
 # Password validation
